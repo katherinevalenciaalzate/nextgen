@@ -1,0 +1,245 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+header {
+  font-family: "Mochiy Pop One", sans-serif;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 2%;
+  background: var(--color-doradofondo);
+}
+
+:root {
+  --color-azulnav2: #1680aa;
+  --color-negro: #000000;
+  --color-gris: #6e7271b4;
+  --color-luna:#000000;
+  --color-blanco: #ffffff;
+  --color-morado: #1631aa;
+  --color-fondoboton:hsl(211, 69%, 91%);
+  --color-doradofondo: radial-gradient(circle, #fdfdfdf8, #85d9e7)  !important; 
+  --letra-grande: 4.1rem;
+  --letra-estandar: 1rem;
+  --letra-encabezado: 1.1rem;
+}
+.main-bg{
+  background: var(--color-doradofondo) !important; 
+}
+
+body {
+  padding-top: 180px;
+  color: var(--color-negro);
+  font-size: var(--letra-estandar);
+  font-family: "PT Sans", sans-serif;
+  background: var(--color-doradofondo);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  color: var(--color-negro);
+  font-size: 35px;
+  justify-content: center;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.logo img {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.lista_nav {
+  display: flex;
+  margin-left: 0px;
+}
+
+.lista_nav a {
+  font-size: var(--letra-encabezado);
+  color: var(--color-negro);
+  margin: 0 10px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all ease.55s;
+  text-decoration: none;
+}
+
+.lista_nav a:hover {
+  color: var(--color-azulnav2);
+}
+.sesion {
+  align-items: center;
+  display: flex;
+}
+
+.sesion a {
+  text-align: center;
+   display: inline-block;
+  padding: 10px 5px;
+  color: var(--color-negro);
+  background-color: var(--color-fondoboton);
+  font-size: var(--letra-estandar);
+  font-weight: 600;
+  border: 5px solid var(--color-gris);
+  margin-right: 10px;
+  transition: all ease 0.55s;
+  width: 150px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.sesion a:hover{
+  border: 5px solid var(--color-blanco);
+  background-color: transparent;
+  font-family: 'Times New Roman', Times, serif;
+  width: 150px;
+}
+ 
+#darkmode{
+font-size: 20px;
+cursor:pointer;
+color:var(--color-luna);
+margin-left: 5px;
+
+}
+body.coloroscuro{
+  --color-azulnav2: #1680aa;
+  --color-negro: #5c36bd;
+  --color-gris: #6e7271b4;
+  --color-blanco: #ffffff;
+  --color-morado: #1631aa;
+  --color-doradofondo: #011627 !important;
+  --color-fondoboton:#105c9956;
+  --color-luna:#ffffff;
+}
+
+body.coloroscuro, body.coloroscuro section {
+  background-color: var(--color-doradofondo) !important;
+}
+
+.iniciosesion{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+.iniciosesion h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+    color:black;
+}
+
+.iniciosesion form{
+padding: 0 40px;
+box-sizing: border-box;
+}
+
+form .usuario{
+position: relative;
+border-bottom: 2px solid #adadad;
+margin: 30px 0;
+}
+
+.usuario input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.usuario label{
+    position: absolute;
+    top: 50%;
+    left:5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16 px;
+    pointer-events: none;
+    transition: .5s ease-in-out;
+}
+
+.usuario span::before{
+    content:'';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #6c3483;
+}
+
+.usuario input:focus + label,
+.usuario input:not(:placeholder-shown) + label {
+  top:-5px;
+  color:#6c3483  
+}
+
+
+
+.usuario input:focus ~ span::before,
+.usuario input:focus ~ span::before{
+  width: 100%;  
+}
+
+.olvido{
+    margin: -5px 0 20px 5px;
+    color: blue;
+    cursor:pointer;
+}
+
+.olvido:hover{
+    text-decoration: underline;
+}
+
+input[type="submit"]{
+    width:100%;
+    height: 50px;
+    border: 5px solid transparent;
+    background:#8f86e6;
+    border-color:#7d71eb ;
+    border-radius: 25px;
+    font-size: 18px;
+    color:black;
+    cursor:pointer;
+    outline:none;
+}
+
+input[type="submit"]:hover{
+    border-color: rgb(70, 24, 221);
+    color: black;
+    transition: .5s;
+}
+
+.registro{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: blue;
+}
+
+.registro a{
+    color: blue;
+    text-decoration: none;
+}
+
+.registro a:hover{
+    text-decoration: underline;
+}
